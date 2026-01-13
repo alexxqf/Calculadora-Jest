@@ -86,7 +86,7 @@ describe("Uso de la función suma", () => {
 
 //Función resta
 
-describe("Uso de la dunción resta", () => {
+describe("Uso de la función resta", () => {
 
     test("Resta dos números positivos", () => {
 
@@ -101,5 +101,53 @@ describe("Uso de la dunción resta", () => {
     test("Resta con números negativos", () => {
 
         expect(resta(-5, -3)).toBe(-2);
+    });
+
+    test("Resta con 0", () => {
+
+        expect(resta(5, 0)).toBe(5);
+        expect(resta(0, 5)).toBe(-5);
+    });
+
+    test("Resta números decimales", () => {
+
+        expect(resta(10.5, 3.2)).toBeCloseTo;
+    });
+});
+
+//Función multiplicación
+
+describe("Uso de la función multiplicación", () => {
+
+    test("Multiplicar números positivos", () => {
+
+        expect(multiplicar(5, 3)).toBe(15);
+    });
+
+    test("Multiplica dos números negativos", () => {
+        
+        expect(multiplicar(-5, -3)).toBe(15);
+    });
+
+    test("Multiplca un número positivo y uno negativo", () => {
+
+        expect(multiplicar(5, -3)).toBe(-15);
+    });
+
+    test("Multiplica por 0", () => {
+
+        expect(multiplicar(5, 0)).toBe(0);
+        expect(multiplicar(0, 5)).toBe(0);
+    });
+
+    test("Multiplicar por uno (elemento neutro)", () => {
+
+        expect(multiplicar(5, 1)).toBe(5);
+        expect(multiplicar(1, 5)).toBe(5);
+    });
+
+    test("Multiplica números decimales", () => {
+
+        expect(multiplicar(2.5, 4)).toBeCloseTo(10);
     });
 });
